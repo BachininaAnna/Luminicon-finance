@@ -13,6 +13,7 @@ yarn-error.log
 
 # IDEs and editors
 .idea/
+.gitignore
 .project
 .classpath
 .c9/
@@ -46,9 +47,9 @@ Thumbs.db
 /frontend/.gitignore
 /frontend/.idea
 
-/backend/.angular
-/backend/node_modules
-/backend/.gitignore
-/backend/.idea
+/backendp/.angular
+/backendp/node_modules
+/backendp/.gitignore
+/backendp/.idea
 
 

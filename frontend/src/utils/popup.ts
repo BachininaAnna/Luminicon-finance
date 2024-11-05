@@ -21,6 +21,7 @@ export class Popup {
         buttonConfirm.addEventListener('click', function () {
             if (category === 'income' || category === 'expense'){
                 CategoryRequests.deleteCategory(category, id);
+                CategoryRequests.getCategories(category, 'cards');
                 Category.deleteOperationsFromBoth();
             }
             if (category === 'both') {

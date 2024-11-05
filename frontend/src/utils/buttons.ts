@@ -207,13 +207,17 @@ export class Buttons {
         }
     }
 
-    private static getToday(): string {
+    public static getToday(): string {
         const today: Date = new Date();
         let month: number | string = today.getMonth() + 1;
         if (month < 10) {
             month = '0' + month;
         }
-        return `${today.getFullYear()}-${month}-${today.getDate()}`;
+        let day: number | string  = today.getDate();
+        if (day - 10 < 0) {
+            day = '0' + day;
+        }
+        return `${today.getFullYear()}-${month}-${day}`;
     }
 
     public static getInterval(): string {

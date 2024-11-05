@@ -54,11 +54,19 @@ export class Category {
             this.whatCategory();
             Buttons.buttonCreateOperations();
             Buttons.buttonCancel('#/both');
+            this.setValueToday();
         }
         if (this.page === 'edit-both') {
             const id: string | null = localStorage.getItem('id');
             Operations.getElement(id as string);
             Buttons.buttonCancel('#/both');
+        }
+    }
+
+    public setValueToday(){
+        const element: HTMLElement | null = document.getElementById('select-date');
+        if (element && element as HTMLInputElement) {
+            element.setAttribute('value', Buttons.getToday());
         }
     }
 
